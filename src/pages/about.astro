@@ -1,5 +1,17 @@
 ---
-
+const pageTitle: string = "About Rowan";
+const identity: {
+    name: string;
+    age: number;
+    location: string;
+    occupation: string;
+} = {
+    name: "Rowan Cardow",
+    age: 29,
+    location: "Australia",
+    occupation: "Technical Support Associate",
+};
+const skills: string[] = ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB", "MySQL", "PostgreSQL", "Docker", "Kubernetes", "CI/CD", "DevOps", "AWS", "Azure", "GCP", "Linux", "Windows", "MacOS", "iOS", "Android", "Windows Phone", "MacOS Phone", "Linux Phone", "Windows Tablet", "MacOS Tablet", "Linux Tablet", "Windows Desktop", "MacOS Desktop", "Linux Desktop", "Windows Server", "MacOS Server", "Linux Server", "Windows Phone", "MacOS Phone", "Linux Phone", "Windows Tablet", "MacOS Tablet", "Linux Tablet", "Windows Desktop", "MacOS Desktop", "Linux Desktop", "Windows Server", "MacOS Server", "Linux Server"];
 ---
 
 <html lang="en">
@@ -9,7 +21,7 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <nav>
@@ -17,6 +29,11 @@
             <a href="/about">About </a>
             <a href="/blog">Blog </a>
         </nav>
-		<h1>I'm Rowan</h1>
+		<h1>{pageTitle}</h1>
+        <p>Here are a few facts about me:</p>
+<ul>
+  <li>My name is {identity.name}.</li>
+  <li>I live in {identity.location} and I work as a {identity.occupation}.</li>
+</ul>
 	</body>
 </html>
